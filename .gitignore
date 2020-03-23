@@ -133,3 +133,6 @@ Android.bp
 
 # outdir
 out/
+
+# build scripts
+build.sh
