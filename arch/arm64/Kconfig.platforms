@@ -31,6 +31,15 @@ config ARCH_SDM660
 	help
 	  This enables support for the SDM660 chipset.
 
+config ARCH_MSM8998
+    bool "Enable Support for Qualcomm Technologies Inc MSM8998"
+    depends on ARCH_QCOM
+    select COMMON_CLK
+    select COMMON_CLK_QCOM
+    select QCOM_GDSC
+    help
+      This enables support for the MSM8998 chipset.
+
 config ARCH_BCM2835
 	bool "Broadcom BCM2835 family"
 	select TIMER_OF
