@@ -10,7 +10,7 @@
  * GNU General Public License for more details.
  */
 
-#include <dt-bindings/clock/msm-clocks-8998.h>
+
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 
 &rpm_bus {

@@ -12,7 +12,6 @@
 
 #include <dt-bindings/interrupt-controller/arm-gic.h>
 #include <dt-bindings/msm/msm-bus-ids.h>
-#include <dt-bindings/clock/msm-clocks-8998.h>
 
 &soc {
 	msm_vidc: qcom,vidc@cc00000 {
