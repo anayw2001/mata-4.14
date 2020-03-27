@@ -12,7 +12,6 @@
 
 #include <dt-bindings/interrupt-controller/irq.h>
 #include "../qcom/msm8998-pinctrl.dtsi"
-#include "../qcom/msm-smb138x.dtsi"
 #include "msm8998-pinctrl-mata.dtsi"
 #include "msm8998-camera-sensor-mata.dtsi"
 #include "../qcom/msm8998-mdss-panels.dtsi"
@@ -423,7 +422,7 @@
 		pinctrl-names = "nfc_active", "nfc_suspend";
 		pinctrl-0 = <&nfc_int_active &nfc_enable_active &msm8998_gpio93_default>;
 		pinctrl-1 = <&nfc_int_suspend &nfc_enable_suspend &msm8998_gpio93_default>;
-		clocks = <&clock_gcc clk_ln_bb_clk3_pin>;
+		clocks = <&clock_rpmcc RPM_SMD_LN_BB_CLK3_PIN>;
 		clock-names = "ref_clk";
 	};
 	felica:nfc@0x28 {
@@ -1397,7 +1396,7 @@
 	};
 };
 
-&red_led {
+&red {
 	qcom,start-idx = <1>;
 	qcom,idx-len = <10>;
 	qcom,duty-pcts = [00 19 32 4B 64 64 4B 32 19 00];
@@ -1408,7 +1407,7 @@
 	qcom,use-blink;
 };
 
-&green_led {
+&green {
 	qcom,start-idx = <1>;
 	qcom,idx-len = <10>;
 	qcom,duty-pcts = [00 19 32 4B 64 64 4B 32 19 00];
@@ -1419,7 +1418,7 @@
 	qcom,use-blink;
 };
 
-&blue_led {
+&blue {
 	qcom,start-idx = <1>;
 	qcom,idx-len = <10>;
 	qcom,duty-pcts = [00 19 32 4B 64 64 4B 32 19 00];
